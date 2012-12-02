@@ -1,0 +1,25 @@
+.target {
+	border: 1px dotted #999;
+	margin-top: -2px; /* to compensate the borders height */
+	background: #fff;
+	width: 100%;
+}
+.dragged {
+	opacity: 0.5;
+}
+.overlay {
+	background: #eee;
+}
+.anchor {
+	cursor: move;
+}
+.column {
+	vertical-align: top;
+	min-width: 200px;
+}
+
+/* Don't edit or overwrite this settings */
+.dragged {
+	z-index: 1000;
+	position: absolute;
+}

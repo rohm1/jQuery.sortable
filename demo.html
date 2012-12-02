@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>jQuery.sortable tests</title>
+
+<link rel="stylesheet" type="text/css" media="all" href="demo.css" />
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+<script type="text/javascript" src="jquery.sortable.js"></script>
+
+<script type="text/javascript">
+
+$(document).ready(function() {
+	$('#container1 div').sortable();
+	$('#container2 div').sortable({anchor: 'span', axis: 'y', showContent: false});
+	$('#container3 div').sortable({dropArea: '.column'});
+});
+
+</script>
+
+</head>
+<body>
+
+<table border="1">
+	<tr>
+		<td>
+			Sortable list<br />
+			<code>$('#container1 div').sortable();</code>
+		</td>
+		<td>
+			<div id="container1">
+				<div><span> # </span>a</div>
+				<div><span> # </span>b</div>
+				<div><span> # </span>c</div>
+				<div><span> # </span>d</div>
+				<div><span> # </span>e</div>
+				<div><span> # </span>f</div>
+				<div><span> # </span>g</div>
+			</div>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			Sortable list; content not visible while dragging; click the "#" to select the elements; elements move only vertically<br />
+			<code>$('#container2 div').sortable({anchor: 'span', axis: 'y', showContent: false});</code>
+		</td>
+		<td>
+			<div id="container2">
+				<div><span> # </span>a</div>
+				<div><span> # </span>b</div>
+				<div><span> # </span>c</div>
+				<div><span> # </span>d</div>
+				<div><span> # </span>e</div>
+				<div><span> # </span>f</div>
+				<div><span> # </span>g</div>
+			</div>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			Sortable list; elements can be dragged from a column to the other<br />
+			<code>$('#container3 div').sortable({dropArea: '.column'});</code>
+		</td>
+		<td>
+			<table id="container3" border="1">
+				<tr>
+					<td class="column">
+						<div><span> # </span>a</div>
+						<div><span> # </span>b</div>
+						<div><span> # </span>c</div>
+						<div><span> # </span>d</div>
+						<div><span> # </span>e</div>
+						<div><span> # </span>f</div>
+					</td>
+					<td class="column">
+						<div><span> # </span>1</div>
+						<div><span> # </span>2</div>
+						<div><span> # </span>3</div>
+						<div><span> # </span>4</div>
+						<div><span> # </span>5</div>
+						<div><span> # </span>6</div>
+					</td>
+				</tr>
+			</table>
+		</td>
+	</tr>
+</table>
+
+</body>
+</html>
