@@ -16,6 +16,7 @@ $('#container div').sortable();
 * showContent: whether to show the content of the element while dragging or not. Default: true.
 
 ###CSS classes###
+* anchor: class applied to the drag anchor. See the anchor parameter above.
 * dragged: class applied to a dragged element.
 * target: class applied to the target area.
 * overlay: class applied to the dragged element when ```showContent == false```.
